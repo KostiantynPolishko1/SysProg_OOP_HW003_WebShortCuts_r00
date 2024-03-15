@@ -11,18 +11,20 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00
             Console.WriteLine("Hello, World!");
 
             WebController db = new WebController() { };
-            Console.WriteLine(db.IsConnection());
+            
+            if(db.IsConnection()) { WebController.WriteInfo(db.webshortcuts.ToList()); }
+            else
+            {
+                Console.WriteLine($"{db.Database.ProviderName} no connection");
+                Environment.Exit(0);
+            }
 
             PsiSet psiSet = new PsiSet() { };
 
-            foreach(webshortcut item in db.webshortcuts.ToList())
-            {
-                Console.WriteLine(item);
-            }
+            List<string> listMsg = new List<string>();
+            List<Process>? processes = UserProcess.StartProcesses(db.webshortcuts.ToList(), psiSet.psi, ref listMsg);
 
-            Process process = Process.Start(psiSet.psi);
-
-            process.Refresh();
+            WebController.WriteInfo(listMsg);
         }
     }
 }

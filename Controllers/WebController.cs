@@ -13,5 +13,21 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00.Controllers
         public WebController() : base() { }
 
         public bool IsConnection() => Database.CanConnect();
+
+        public static void WriteInfo(in List<webshortcut> items)
+        {
+            foreach (webshortcut item in items)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public static void WriteInfo(in List<string> items)
+        {
+            foreach(string item in items)
+            {
+                Console.WriteLine($"\tAttention!\n\t{item}");
+            }
+        }
     }
 }
