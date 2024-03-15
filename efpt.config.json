@@ -18,6 +18,10 @@
       {
          "Name": "[dbo].[webshortcuts]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[webtracks]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "sql5109.db_aa534b_polxswp31.dbo",
