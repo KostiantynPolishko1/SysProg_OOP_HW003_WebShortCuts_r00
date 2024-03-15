@@ -25,6 +25,8 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00
             List<Process>? processes = UserProcess.StartProcesses(db.webshortcuts.ToList(), psiSet.psi, ref listMsg);
 
             WebController.WriteInfo(listMsg);
+
+            //UserProcess.CloseWebPage(db.webshortcuts.ToList()[0]);
         }
     }
 }
