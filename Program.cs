@@ -1,4 +1,6 @@
-﻿using SysProg_OOP_HW003_WebShortCuts_r00.Models;
+using SysProg_OOP_HW003_WebShortCuts_r00.Controllers;
+using SysProg_OOP_HW003_WebShortCuts_r00.Models;
+using System.Diagnostics;
 
 namespace SysProg_OOP_HW003_WebShortCuts_r00
 {
@@ -8,13 +10,19 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00
         {
             Console.WriteLine("Hello, World!");
 
-            WebDbContext db = new WebDbContext() { };
-
+            WebController db = new WebController() { };
             Console.WriteLine(db.IsConnection());
+
+            PsiSet psiSet = new PsiSet() { };
+
             foreach(webshortcut item in db.webshortcuts.ToList())
             {
                 Console.WriteLine(item);
             }
+
+            Process process = Process.Start(psiSet.psi);
+
+            process.Refresh();
         }
     }
 }
