@@ -32,11 +32,6 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00
             (bool flag2, string msg) = db.isSaveChanges();
             
             if(!flag2) { Console.WriteLine(msg); }
-/*
-            db.webtracks.Add(new webtrack(DateTime.UtcNow.ToLocalTime(), DateTime.UtcNow.ToLocalTime().TimeOfDay, "empty", "unknown", "unknown"));
-
-            db.webtracks.Add(new webtrack("empty", "unknown", "unknown") { });
-            db.SaveChanges();*/
 
         }
     }

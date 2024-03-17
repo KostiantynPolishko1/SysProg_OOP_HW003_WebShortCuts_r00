@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysProg_OOP_HW003_WebShortCuts_r00", "SysProg_OOP_HW003_WebShortCuts_r00.csproj", "{AB4B87EB-ABED-4B1B-A788-47E0C19C94BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysProg_OOP_HW003_WebShortCuts_r00", "SysProg_OOP_HW003_WebShortCuts_r00.csproj", "{AB4B87EB-ABED-4B1B-A788-47E0C19C94BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp", "..\WinFormsApp\WinFormsApp.csproj", "{05069DE1-3479-4978-AE5F-C4A347110A76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AB4B87EB-ABED-4B1B-A788-47E0C19C94BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB4B87EB-ABED-4B1B-A788-47E0C19C94BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB4B87EB-ABED-4B1B-A788-47E0C19C94BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05069DE1-3479-4978-AE5F-C4A347110A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05069DE1-3479-4978-AE5F-C4A347110A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05069DE1-3479-4978-AE5F-C4A347110A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05069DE1-3479-4978-AE5F-C4A347110A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
