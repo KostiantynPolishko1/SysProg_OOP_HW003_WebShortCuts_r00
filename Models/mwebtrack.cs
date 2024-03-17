@@ -9,12 +9,16 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00.Models
     public partial class webtrack
     {
         public webtrack() : 
-            this (0, DateTime.UtcNow.ToLocalTime(), DateTime.UtcNow.ToLocalTime().TimeOfDay, "empty", "unknown", "unknown") { }
+            this (0, null, null, "empty", "unknown", "unknown") { }
 
         public webtrack(in string url, in string name, in string owner) : 
-            this (0, DateTime.UtcNow.ToLocalTime(), DateTime.UtcNow.ToLocalTime().TimeOfDay, url, name, owner) { }
+            this (0, null, null, url, name, owner) { }
 
-        public webtrack(int id, DateTime date, TimeSpan time, in string url, in string name, in string owner)
+        public webtrack(in DateTime date, in TimeSpan time, in string url, in string name, in string owner) :
+            this(0, date, time, url, name, owner)
+        { }
+
+        public webtrack(int id, DateTime? date, TimeSpan? time, in string url, in string name, in string owner)
         {
             this.id = id;
             this.date = date;
@@ -23,5 +27,11 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00.Models
             this.name = name;
             this.owner = owner;
         }
+
+        public override string ToString()
+        {
+            return $"{id} | {date} | {time} | {url} | {name} | {owner}";
+        }
     }
 }
+ 
