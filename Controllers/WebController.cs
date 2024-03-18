@@ -50,6 +50,19 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00.Controllers
             }
         }
 
+        public void AddWebToDb(in webtrack wt)
+        {
+
+            this.webtracks.Add(wt);
+            (bool flag, string msg) = this.isSaveChanges();
+
+            if (!flag)
+            {
+                Console.WriteLine(msg);
+                //or write msg to logfile
+            }
+        }
+
         public static void writeInfo(in List<webshortcut> items)
         {
             foreach (webshortcut item in items)
