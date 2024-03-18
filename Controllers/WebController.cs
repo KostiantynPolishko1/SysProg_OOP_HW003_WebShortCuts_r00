@@ -36,6 +36,20 @@ namespace SysProg_OOP_HW003_WebShortCuts_r00.Controllers
             }
         }
 
+        public string GetAllWebShortcuts(out List<webshortcut>? webShortcuts)
+        {
+            try
+            {
+                webShortcuts = webshortcuts.ToList();
+                return string.Empty;
+            }
+            catch (SystemException sysEx)
+            {
+                webShortcuts = null;
+                return sysEx.Message;
+            }
+        }
+
         public static void writeInfo(in List<webshortcut> items)
         {
             foreach (webshortcut item in items)
